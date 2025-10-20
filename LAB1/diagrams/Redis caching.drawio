@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.7">
+  <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
+    <mxGraphModel dx="784" dy="742" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bc5ijEBR-qPgTlc-g5Ht-1" value="Client Request" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bc5ijEBR-qPgTlc-g5Ht-2" value="Check&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;Redis cache&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bc5ijEBR-qPgTlc-g5Ht-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bc5ijEBR-qPgTlc-g5Ht-1" target="bc5ijEBR-qPgTlc-g5Ht-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="290" y="550" as="sourcePoint" />
+            <mxPoint x="340" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bc5ijEBR-qPgTlc-g5Ht-6" value="CACHE HIT&lt;div&gt;(found)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bc5ijEBR-qPgTlc-g5Ht-7" value="CACHE MISS&lt;div&gt;(Not Found)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bc5ijEBR-qPgTlc-g5Ht-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bc5ijEBR-qPgTlc-g5Ht-6" target="bc5ijEBR-qPgTlc-g5Ht-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="520" as="sourcePoint" />
+            <mxPoint x="210" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bc5ijEBR-qPgTlc-g5Ht-9" value="Return Data" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bc5ijEBR-qPgTlc-g5Ht-10" value="Save to Redis" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="630" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bc5ijEBR-qPgTlc-g5Ht-11" value="Query PostgreSQL" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bc5ijEBR-qPgTlc-g5Ht-12" value="Return Data" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bc5ijEBR-qPgTlc-g5Ht-13" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="bc5ijEBR-qPgTlc-g5Ht-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="490" as="sourcePoint" />
+            <mxPoint x="550" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bc5ijEBR-qPgTlc-g5Ht-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bc5ijEBR-qPgTlc-g5Ht-11" target="bc5ijEBR-qPgTlc-g5Ht-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="600" as="sourcePoint" />
+            <mxPoint x="560" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bc5ijEBR-qPgTlc-g5Ht-15" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="bc5ijEBR-qPgTlc-g5Ht-10" target="bc5ijEBR-qPgTlc-g5Ht-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="710" as="sourcePoint" />
+            <mxPoint x="570" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bc5ijEBR-qPgTlc-g5Ht-16" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="bc5ijEBR-qPgTlc-g5Ht-2" target="bc5ijEBR-qPgTlc-g5Ht-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="380" as="sourcePoint" />
+            <mxPoint x="410" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bc5ijEBR-qPgTlc-g5Ht-17" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="bc5ijEBR-qPgTlc-g5Ht-2" target="bc5ijEBR-qPgTlc-g5Ht-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="350" as="sourcePoint" />
+            <mxPoint x="520" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
