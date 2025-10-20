@@ -1,1 +1,3 @@
-# software-architecture-2025-2026
+# Software Architecture - First Semester
+
+This repository contains my first semester Software Architecture assignments
