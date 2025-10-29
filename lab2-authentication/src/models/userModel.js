@@ -10,7 +10,7 @@ class User {
         const password_hash = await bcrypt.hash(password, 10);
 
         const query = `
-            INSERT INTO users (first_name, last_name, email, phone_number, address, password_hash)
+            INSERT INTO users (first_name, last_name, email, phone_number, address, password)
             VALUES (?, ?, ?, ?, ?, ?)
         `;
 

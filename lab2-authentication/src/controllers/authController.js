@@ -84,7 +84,7 @@ exports.login = async (req, res) => {
         }
 
         // Verify password
-        const isPasswordValid = await User.verifyPassword(password, user.password_hash);
+        const isPasswordValid = await User.verifyPassword(password, user.password);
         if (!isPasswordValid) {
             return res.status(401).json({
                 success: false,
@@ -96,7 +96,7 @@ exports.login = async (req, res) => {
         const token = generateToken(user.id);
 
         // Remove password from response
-        delete user.password_hash;
+        delete user.password;
 
         res.status(200).json({
             success: true,

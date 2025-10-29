@@ -20,8 +20,8 @@ app.use((req, res, next) => {
 });
 
 // Routes
-app.use('/vi/api/auth', authRoutes);
-app.use('/vi/api/users', userRoutes);
+app.use('/v1/api/auth', authRoutes);
+app.use('/v1/api/users', userRoutes);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
@@ -29,6 +29,20 @@ app.get('/health', (req, res) => {
         success: true,
         message: 'Server is running',
         timestamp: new Date().toISOString()
+    });
+});
+
+// Root endpoint
+app.get('/', (req, res) => {
+    res.status(200).json({
+        success: true,
+        message: 'Virtual Payment Platform API',
+        version: '1.0.0',
+        endpoints: {
+            auth: '/v1/api/auth',
+            users: '/v1/api/users',
+            health: '/health'
+        }
     });
 });
 
