@@ -1,3 +1,15 @@
 # Software Architecture - First Semester
+## Virtual Payment Platform
 
-This repository contains my first semester Software Architecture assignments
+### Description
+A virtual payment platform that processes virtual payments by providing virtual cards to users.
+
+### Technology Stack
+- Node.js
+- Express.js
+- MySQL
+- React
+
+### Seurity
+- Password Hashing: bcryptjs
+- Authentication: JSON Web Tokens (JWT)
