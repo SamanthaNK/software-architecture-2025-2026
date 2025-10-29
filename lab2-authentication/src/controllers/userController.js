@@ -44,6 +44,7 @@ exports.getAllUsers = async (req, res) => {
     }
 };
 
+/*
 // Update user profile
 exports.updateProfile = async (req, res) => {
     try {
@@ -111,3 +112,4 @@ exports.deleteAccount = async (req, res) => {
         });
     }
 };
+*/

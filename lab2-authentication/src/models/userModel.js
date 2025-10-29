@@ -47,6 +47,7 @@ class User {
         return await bcrypt.compare(plainPassword, hashedPassword);
     }
 
+    /*
     // Update user information
     static async update(id, userData) {
         const { first_name, last_name, phone_number, address } = userData;
@@ -67,6 +68,7 @@ class User {
         const [result] = await db.execute(query, [id]);
         return result.affectedRows > 0;
     }
+        */
 }
 
 module.exports = User;
